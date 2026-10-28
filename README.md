@@ -27,21 +27,34 @@ Acting strictly as a technology intermediary, the platform provides robust escro
 * **Security:** Deny-by-default role-based access control (RBAC), Argon2id/bcrypt password hashing, short-lived JWT tokens, and an append-only immutable audit logging system.
 * Repository Structure
 
-rental-marketplace/
+## 📁 Repository Structure
+
+```text
+rental-marketplace-platform/
 │
-├── .github/                      # CI/CD Workflows & Pull Request Templates
+├── .github/                      # GitHub automation workflows & PR templates
+│   └── workflows/
+│       └── ci.yml                # CI/CD pipeline for automated testing and builds
 │
-├── docs/                         # System Design & Documentation (Active Phase)
-│   ├── architecture/             # System Architecture, C4 Models, Sequence Diagrams
-│   ├── database/                 # ER Diagrams & Schema Designs
-│   ├── api/                      # OpenAPI 3.0 / Swagger Contracts
-│   └── project-description.md    # Comprehensive Project Overview
+├── docs/                         # Project documentation and system design
+│   ├── architecture/
+│   │   ├── system-architecture.png # Overall system architecture diagram
+│   │   ├── c4-model/             # C4 model diagrams (Context, Containers, etc.)
+│   │   └── sequence-diagrams/    # Core sequence diagrams (Booking, Payments, Disputes)
+│   ├── database/
+│   │   ├── er-diagram.png        # Entity Relationship Diagram (ERD)
+│   │   └── schema-design.sql     # Initial database schema and table definitions
+│   ├── api/
+│   │   └── swagger-openapi.yaml  # Initial API contracts (Contract-First Design)
+│   └── policies/
+│       └── policies-book.md      # Platform policies book and business rules (13 chapters)
 │
-├── src/                          # Application Source Code
-│   ├── backend/                  # Core REST API Services
-│   ├── frontend/                 # Responsive Web & Mobile Interfaces (Arabic/English)
-│   └── ai-ml/                    # Policy RAG, Smart Pricing, and Risk Scoring Models
+├── src/                          # Actual source code
+│   ├── backend/                  # Backend services and APIs
+│   ├── frontend/                 # Client interfaces (Web / Mobile apps)
+│   └── ai-ml/                    # AI/ML models & data science modules (Policy RAG, Smart Pricing, Risk Scoring)
 │
-├── .gitignore                    # Environment & Secret Exclusion Rules
-└── README.md                     # Project Overview & Setup Guide
+├── .gitignore                    # Excluded files (e.g., .env, node_modules, virtual environments)
+├── README.md                     # Main repository landing page
+└── LICENSE                       # Project license
 
