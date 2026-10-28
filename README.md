@@ -25,3 +25,23 @@ Acting strictly as a technology intermediary, the platform provides robust escro
 * **Database & State Management:** Relational database with spatial indexing (PostGIS support) for geographic discovery and strict ACID-compliant state machine lifecycle enforcement.
 
 * **Security:** Deny-by-default role-based access control (RBAC), Argon2id/bcrypt password hashing, short-lived JWT tokens, and an append-only immutable audit logging system.
+* Repository Structure
+
+rental-marketplace/
+│
+├── .github/                      # CI/CD Workflows & Pull Request Templates
+│
+├── docs/                         # System Design & Documentation (Active Phase)
+│   ├── architecture/             # System Architecture, C4 Models, Sequence Diagrams
+│   ├── database/                 # ER Diagrams & Schema Designs
+│   ├── api/                      # OpenAPI 3.0 / Swagger Contracts
+│   └── project-description.md    # Comprehensive Project Overview
+│
+├── src/                          # Application Source Code
+│   ├── backend/                  # Core REST API Services
+│   ├── frontend/                 # Responsive Web & Mobile Interfaces (Arabic/English)
+│   └── ai-ml/                    # Policy RAG, Smart Pricing, and Risk Scoring Models
+│
+├── .gitignore                    # Environment & Secret Exclusion Rules
+└── README.md                     # Project Overview & Setup Guide
+
