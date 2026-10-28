@@ -1,2 +1,27 @@
-# Graduation-Project
-منصة سوق إلكتروني نظير لنظير (P2P) لاستئجار الأجهزة التقنية في الإسكندرية. تدمج آليات دفع آمنة وضمان إسكرو للودائع، فحص حالة العناصر بصرياً عند الاستلام والتسليم، نظام تسوية منازعات ومراجعة، وتقنيات ذكاء اصطناعي للبحث الذكي، التسعير، وتحليل المخاطر لضمان تجربة تأجير موثوقة ومحمية بالكامل.
+# Project Description: Rental Marketplace Platform
+
+## 1. Executive Summary & Vision
+
+The **Rental Marketplace Platform** is an enterprise-grade, peer-to-peer (P2P) digital ecosystem designed to connect item owners with renters securely, transparently, and efficiently. Operating initially as an MVP focused in **Alexandria, Egypt**, and targeting high-value technology devices (cameras, laptops, gaming consoles, and audio equipment), the platform facilitates transactions entirely in **Egyptian Pounds (EGP)**.
+
+Acting strictly as a technology intermediary, the platform provides robust escrow mechanisms for refundable security deposits, guided physical inspection workflows, structured dispute resolution, and immutable audit trails, ensuring trust and legal compliance without owning or inspecting physical items directly.
+
+## 2. Core Operational Pillars
+
+* **Approval-First Booking Workflow:** Renters submit reservation requests, but payments are triggered *only* after explicit Owner approval, locking calendar availability atomically to prevent double-booking.
+
+* **Segregated Escrow & Payments:** Integration with PCI-DSS compliant payment gateways (Paymob/Fawry) to handle secure EGP transactions, itemized checkouts (Rental Fee, Platform Service Fee, and Refundable Security Deposit), and escrow management.
+
+* **Trust, Safety & Identity Protection:** Multi-tier verification spanning Email, Phone OTP, and National ID verification reviewed by Admins. National IDs are stored securely using AES-256 encryption with short-lived pre-signed URLs and dynamic administrative watermarking.
+
+* **Progressive Enforcement & Dispute Adjudication:** Structured workflows for warnings, restrictions, temporary suspensions, and permanent identity-based bans. Disputes are triaged by Support Agents and adjudicated exclusively by Admins using immutable on-platform evidence (chat logs, check-in/check-out condition photos).
+
+* **AI & Data Science Integration:** Built-in intelligence featuring Policy RAG (grounded in a 13-chapter Policies Book), AI Smart Pricing, Smart Deposit estimation, Risk/Fraud scoring, Damage Detection, and Recommendation Engines with a strict "Human-in-the-Loop" policy for serious sanctions.
+
+## 3. Architecture & Tech Stack Highlights
+
+* **Backend Services:** Modular RESTful APIs adhering to clean architecture principles, OpenAPI 3.0 documentation, and RFC 7807 error handling standards.
+
+* **Database & State Management:** Relational database with spatial indexing (PostGIS support) for geographic discovery and strict ACID-compliant state machine lifecycle enforcement.
+
+* **Security:** Deny-by-default role-based access control (RBAC), Argon2id/bcrypt password hashing, short-lived JWT tokens, and an append-only immutable audit logging system.
