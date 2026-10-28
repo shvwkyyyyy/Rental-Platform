@@ -25,9 +25,8 @@ Acting strictly as a technology intermediary, the platform provides robust escro
 * **Database & State Management:** Relational database with spatial indexing (PostGIS support) for geographic discovery and strict ACID-compliant state machine lifecycle enforcement.
 
 * **Security:** Deny-by-default role-based access control (RBAC), Argon2id/bcrypt password hashing, short-lived JWT tokens, and an append-only immutable audit logging system.
-* Repository Structure
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 rental-marketplace-platform/
